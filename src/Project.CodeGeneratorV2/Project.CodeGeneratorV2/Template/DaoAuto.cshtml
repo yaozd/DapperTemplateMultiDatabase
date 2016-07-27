@@ -194,9 +194,8 @@
         strSql.Append("@columnNames  ");
         strSql.Append("from [@tableName] ");
         strSql.AppendFormat("where 1=1 and {0} ", where);
-        var result = _dbHelper.FindList<@modelClassName>
-    (strSql.ToString(), whereModel);
-    return result;
+        var result = _dbHelper.FindList<@modelClassName>(strSql.ToString(), whereModel);
+        return result;
     }
     //
     public IList<@modelClassName> FindListByPage(@modelClassName whereModel, string where, string orderBy, int pageIndex, int pageSize)
